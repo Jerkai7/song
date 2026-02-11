@@ -1,0 +1,95 @@
+/* Custom CSS - Bootstrap 5 + Ramah HP */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #f8f9fc;
+    min-height: 100vh;
+}
+
+/* Tombol besar, nyaman ditekan */
+.btn {
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+    transition: all 0.1s ease;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* Input lembut, numerik */
+input[type="text"], input[type="number"], input[type="password"] {
+    border-radius: 16px;
+    border: 1.5px solid #e0e7ff;
+    padding: 14px 18px;
+    font-size: 18px;
+    background-color: white;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus {
+    border-color: #4361ee;
+    box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.15);
+    outline: none;
+}
+
+/* keypad numerik HP */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Card viewer */
+.viewer-card {
+    background: linear-gradient(145deg, #ffffff, #f5f7ff);
+    border-radius: 28px;
+    padding: 1.2rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+    border: none;
+}
+
+.viewer-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.viewer-score {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1;
+}
+
+/* Background subtle */
+.viewer-bg {
+    background: linear-gradient(160deg, #eef2ff 0%, #ffffff 100%);
+}
+
+.admin-bg {
+    background: #f1f5f9;
+}
+
+/* Card admin */
+.card {
+    border-radius: 28px;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(4px);
+}
+
+/* Responsif portrait HP */
+@media (max-width: 576px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .display-6 {
+        font-size: 1.8rem;
+    }
+    .viewer-score {
+        font-size: 1.8rem;
+    }
+}

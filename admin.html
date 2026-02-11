@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Admin - Input Skor</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-bg">
+    <div class="container py-3">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="h3 text-dark">🛠️ Admin Panel</h2>
+            <a href="index.html" class="btn btn-outline-primary btn-sm">👁 Lihat Viewer</a>
+        </div>
+
+        <!-- PIN Admin -->
+        <div class="card shadow-sm mb-4 border-0">
+            <div class="card-body">
+                <label for="adminPin" class="form-label fw-bold">🔐 PIN Admin</label>
+                <input type="password" id="adminPin" class="form-control form-control-lg" placeholder="Masukkan PIN" inputmode="numeric" pattern="\d*">
+                <div id="pinError" class="text-danger small mt-1 d-none">PIN salah!</div>
+                <button id="unlockBtn" class="btn btn-warning w-100 mt-3 py-2 fw-bold">Buka Akses</button>
+            </div>
+        </div>
+
+        <!-- Form Nama Pemain (dikunci setelah simpan) -->
+        <div class="card shadow-sm mb-4 border-0">
+            <div class="card-body">
+                <h5 class="card-title">✏️ Nama Pemain</h5>
+                <div id="namaInputContainer">
+                    <!-- 5 input nama akan dibuat oleh JS -->
+                </div>
+                <button id="saveNamesBtn" class="btn btn-success w-100 mt-3 py-2 fw-bold">Simpan Nama</button>
+                <button id="resetNamesBtn" class="btn btn-outline-secondary w-100 mt-2 py-2 fw-bold">Reset Nama Pemain</button>
+            </div>
+        </div>
+
+        <!-- Input Skor Ronde -->
+        <div class="card shadow-sm mb-4 border-0">
+            <div class="card-body">
+                <h5 class="card-title">🎴 Input Sisa Kartu</h5>
+                <div id="skorInputContainer">
+                    <!-- 5 input skor akan dibuat oleh JS -->
+                </div>
+                <button id="submitRoundBtn" class="btn btn-primary w-100 mt-4 py-3 fw-bold fs-5">➕ Simpan / Hitung Ronde</button>
+            </div>
+        </div>
+
+        <!-- Tombol Reset Total -->
+        <button id="resetAllBtn" class="btn btn-danger w-100 py-3 fw-bold fs-5">⚠️ Reset Semua Data</button>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
